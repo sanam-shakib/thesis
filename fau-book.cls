@@ -117,8 +117,8 @@
 
 % ------------------------------------------------------------------------------
 % Logo Files
-\def\WordMark{atelier/default-image.pdf}
-\def\ExtraLogo{atelier/default-image.pdf}
+\def\WordMark{-}
+\def\ExtraLogo{-}
 \DeclareOptionX{WordMark}{\def\WordMark{#1}}%
 \DeclareOptionX{ExtraLogo}{\def\ExtraLogo{#1}}%
 % ------------------------------------------------------------------------------
@@ -235,11 +235,11 @@ von \textbf{\@author}
 %
 \begin{minipage}{0.5\textwidth}
 %\vspace*{10mm}
-\includegraphics[width=\textwidth]{\WordMark}
+\IfFileExists{\WordMark}{\includegraphics[width=\textwidth]{\WordMark}}{}
 \end{minipage}
 \hfill
 \begin{minipage}{0.4\textwidth}
-\includegraphics[width=\textwidth]{\ExtraLogo} \vspace{3mm}
+\IfFileExists{\ExtraLogo}{\includegraphics[width=\textwidth]{\ExtraLogo}}{} \vspace{3mm}
 \end{minipage}
 }
 \end{titlepage}

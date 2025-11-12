@@ -30,7 +30,17 @@
 %
 \DeclareOptionX{noabbrev}{\PassOptionsToPackage{noabbrev}{cleveref}}
 %
+\DeclareOptionX{institute}{%
+	\PassOptionsToPackage{#1}{styles/fau-colors}
+}
+%
 \ProcessOptionsX
+
+%##### 
+% Colors
+%
+\RequirePackage{styles/fau-colors}
+
 % ########################################################################################
 % Chapter opening
 % ----------------------------------------------------------------------------------------
